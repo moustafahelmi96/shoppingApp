@@ -1,4 +1,4 @@
-import React from "react"
+import React, { FC } from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle, View } from "react-native"
 import { CategoryNavigatorButton, GenderSwitch, Header, Screen } from "../../components"
@@ -8,7 +8,7 @@ import { color } from "../../theme"
 import { categoriesData } from "./data"
 import { hp } from "../../utils/commonFunctions"
 
-export const categoriesScreen = observer(function categoriesScreen() {
+export const categoriesScreen: FC<any> = observer(function categoriesScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 

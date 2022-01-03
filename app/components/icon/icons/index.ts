@@ -3,7 +3,8 @@ export const icons = {
   bug: require("./ladybug.png"),
   cart: "ios-cart-outline",
   back: "chevron-back",
-  forward: "chevron-forward"
+  forward: "chevron-forward",
+  wishlist: "star-outline",
 }
 
 export type IconTypes = keyof typeof icons

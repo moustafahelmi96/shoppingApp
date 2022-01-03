@@ -1,27 +1,34 @@
-import React from "react"
+import React, { FC } from "react"
 import { observer } from "mobx-react-lite"
 import { View, ViewStyle } from "react-native"
 import { CategoryNavigatorButton, Header, Screen } from "../../components"
-// import { useNavigation } from "@react-navigation/native"
+import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 
-export const CategoryDetailsScreen = observer(function CategoryDetailsScreen({ route }) {
+export const CategoryDetailsScreen: FC<any> = observer(function CategoryDetailsScreen({ route }) {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-  // const navigation = useNavigation()
+  const navigation = useNavigation()
   const subCategories = route.params?.subCategories || []
   return (
     <View style={FULL}>
       <Header leftIcon="back" headerText={route?.params?.category} rightIcon="cart" />
       <Screen style={ROOT} preset="scroll" unsafe>
+        {console.log("pr", subCategories)}
         {subCategories.map((subCategory, index) => (
           <CategoryNavigatorButton
             title={subCategory?.name}
             categoryColor={subCategory?.color}
             key={index}
+            onPress={() => {
+              navigation.navigate("productList", {
+                title: subCategory?.name,
+                products: subCategory?.products,
+              })
+            }}
           />
         ))}
       </Screen>
