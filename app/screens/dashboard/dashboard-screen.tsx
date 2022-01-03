@@ -18,7 +18,7 @@ export const DashboardScreen = observer(function DashboardScreen() {
   // const navigation = useNavigation()
   return (
     <View testID="DashboardScreen" style={FULL}>
-      <Header rightIcon={"shopping-bag"} />
+      <Header headerText={"FRESHFETCH"} rightIcon={"cart"} />
       <View style={DISCLAIMER}>
         <Typography
           text={"Sale | Up to 50% | Shop now"}

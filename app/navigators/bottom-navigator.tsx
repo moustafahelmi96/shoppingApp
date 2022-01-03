@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-import { ComingSoonScreen, DashboardScreen } from "../screens"
+import { ComingSoonScreen, DashboardScreen, SearchScreen } from "../screens"
 import { color } from "../theme"
 import Typography from "../components/Typography"
 import Icon from "react-native-vector-icons/FontAwesome"
@@ -30,7 +30,7 @@ const BottomNavigator: FC = () => {
       />
       <Tab.Screen
         name="search"
-        component={ComingSoonScreen}
+        component={SearchScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <Icon name="search" size={25} color={focused ? activeTint : deActiveTint} />

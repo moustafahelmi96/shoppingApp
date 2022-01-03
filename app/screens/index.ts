@@ -5,3 +5,4 @@ export * from "./error/error-boundary"
 // export other screens here
 export * from "./dashboard/dashboard-screen"
 export * from "./coming-soon/coming-soon-screen"
+export * from "./search/search-screen"

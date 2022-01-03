@@ -6,8 +6,11 @@ import { Screen, Text } from "../../components"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 
+const FULL: ViewStyle = {
+  flex:1,
+  backgroundColor: color.palette.white,
+}
 const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
   flex: 1,
 }
 
@@ -18,8 +21,10 @@ export const <%= props.pascalCaseName %>Screen = observer(function <%= props.pas
   // Pull in navigation via hook
   // const navigation = useNavigation()
   return (
-    <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="<%= props.camelName %>" />
-    </Screen>
+    <View style={FULL}>
+      <Screen style={ROOT} preset="scroll">
+        <Text preset="header" text="<%= props.camelName %>" />
+      </Screen>
+  </View>
   )
 })

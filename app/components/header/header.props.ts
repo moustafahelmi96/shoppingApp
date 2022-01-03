@@ -26,7 +26,7 @@ export interface HeaderProps {
   /**
    * Icon that should appear on the right
    */
-  rightIcon?: string
+  rightIcon?: IconTypes
 
   /**
    * What happens when you press the right icon
