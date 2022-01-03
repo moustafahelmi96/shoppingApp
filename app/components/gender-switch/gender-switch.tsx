@@ -16,6 +16,9 @@ export interface GenderSwitchProps {
 /**
  * Describe your component here
  * User can switch between genders by this component
+ *
+ * used in: search-screen
+ *
  * Note: hover on image path to check out the component
  * please update the pic if you made any UI changes
  * require('../../../assets/screenShots/genderRadioButton.png')
