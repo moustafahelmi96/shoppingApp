@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
-import { DashboardScreen } from "../screens"
+import { ComingSoonScreen, DashboardScreen } from "../screens"
 import { color } from "../theme"
 import Typography from "../components/Typography"
 import Icon from "react-native-vector-icons/FontAwesome"
@@ -17,7 +17,7 @@ const BottomNavigator: FC = () => {
       }}
     >
       <Tab.Screen
-        name="Dashboard"
+        name="dashboard"
         component={DashboardScreen}
         options={{
           tabBarIcon: ({ focused }) => (
@@ -29,8 +29,8 @@ const BottomNavigator: FC = () => {
         }}
       />
       <Tab.Screen
-        name="Search"
-        component={DashboardScreen}
+        name="search"
+        component={ComingSoonScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <Icon name="search" size={25} color={focused ? activeTint : deActiveTint} />
@@ -41,20 +41,20 @@ const BottomNavigator: FC = () => {
         }}
       />
       <Tab.Screen
-        name="Designers"
-        component={DashboardScreen}
+        name="brands"
+        component={ComingSoonScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <Icon name="tag" size={25} color={focused ? activeTint : deActiveTint} />
           ),
           tabBarLabel: ({ focused }) => (
-            <Typography text={"Designers"} size={10} color={focused ? activeTint : deActiveTint} />
+            <Typography text={"brands"} size={10} color={focused ? activeTint : deActiveTint} />
           ),
         }}
       />
       <Tab.Screen
-        name="Wishlist"
-        component={DashboardScreen}
+        name="wishlist"
+        component={ComingSoonScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <Icon name="star" size={25} color={focused ? activeTint : deActiveTint} />
@@ -65,8 +65,8 @@ const BottomNavigator: FC = () => {
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={DashboardScreen}
+        name="profile"
+        component={ComingSoonScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <Icon name="user" size={25} color={focused ? activeTint : deActiveTint} />

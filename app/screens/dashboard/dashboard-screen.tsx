@@ -8,7 +8,7 @@ import { color } from "../../theme"
 import { hp } from "../../utils/commonFunctions"
 import Typography from "../../components/Typography"
 
-const saleBanner = require("../../../assets/images/saleBanner.jpg")
+const SALE_BANNER = require("../../../assets/images/saleBanner.jpg")
 
 export const DashboardScreen = observer(function DashboardScreen() {
   // Pull in one of our MST stores
@@ -27,9 +27,9 @@ export const DashboardScreen = observer(function DashboardScreen() {
         />
       </View>
       <Screen style={SCROLL} preset="scroll" unsafe>
-        <AutoImage source={saleBanner} style={DISCOUNT_IMAGE} />
+        <AutoImage source={SALE_BANNER} style={DISCOUNT_IMAGE} />
         <Button preset="outline" text="Shop Now" style={SHOP_BUTTON} textStyle={SHOP_BUTTON_TEXT} />
-        <AutoImage source={saleBanner} style={DISCOUNT_IMAGE} />
+        <AutoImage source={SALE_BANNER} style={DISCOUNT_IMAGE} />
         <Button preset="outline" text="Shop Now" style={SHOP_BUTTON} textStyle={SHOP_BUTTON_TEXT} />
       </Screen>
     </View>

@@ -6,6 +6,7 @@ import Icon from "react-native-vector-icons/FontAwesome"
 import { spacing } from "../../theme"
 import { translate } from "../../i18n/"
 import Typography from "../Typography"
+import { hp } from "../../utils/commonFunctions"
 
 // static styles
 const ROOT: ViewStyle = {
@@ -14,6 +15,7 @@ const ROOT: ViewStyle = {
   alignItems: "center",
   paddingBottom: spacing[2],
   justifyContent: "flex-start",
+  height: hp(5),
 }
 const TITLE_MIDDLE: ViewStyle = {
   flex: 1,
