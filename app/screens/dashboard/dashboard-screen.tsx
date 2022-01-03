@@ -8,6 +8,8 @@ import { color } from "../../theme"
 import { hp } from "../../utils/commonFunctions"
 import Typography from "../../components/Typography"
 
+const saleBanner = require("../../../assets/images/saleBanner.jpg")
+
 export const DashboardScreen = observer(function DashboardScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
@@ -16,7 +18,7 @@ export const DashboardScreen = observer(function DashboardScreen() {
   // const navigation = useNavigation()
   return (
     <View testID="DashboardScreen" style={FULL}>
-      <Header />
+      <Header rightIcon={"shopping-bag"} />
       <View style={DISCLAIMER}>
         <Typography
           text={"Sale | Up to 50% | Shop now"}
@@ -25,15 +27,9 @@ export const DashboardScreen = observer(function DashboardScreen() {
         />
       </View>
       <Screen style={SCROLL} preset="scroll" unsafe>
-        <AutoImage
-          source={{ uri: "https://rickandmortyapi.com/api/character/avatar/2.jpeg" }}
-          style={DISCOUNT_IMAGE}
-        />
+        <AutoImage source={saleBanner} style={DISCOUNT_IMAGE} />
         <Button preset="outline" text="Shop Now" style={SHOP_BUTTON} textStyle={SHOP_BUTTON_TEXT} />
-        <AutoImage
-          source={{ uri: "https://rickandmortyapi.com/api/character/avatar/2.jpeg" }}
-          style={DISCOUNT_IMAGE}
-        />
+        <AutoImage source={saleBanner} style={DISCOUNT_IMAGE} />
         <Button preset="outline" text="Shop Now" style={SHOP_BUTTON} textStyle={SHOP_BUTTON_TEXT} />
       </Screen>
     </View>

@@ -6,10 +6,12 @@
  */
 import React from "react"
 import { useColorScheme } from "react-native"
-import { NavigationContainer, DefaultTheme, DarkTheme } from "@react-navigation/native"
+import { NavigationContainer, DefaultTheme, DarkTheme, TabActions } from "@react-navigation/native"
 import { createNativeStackNavigator } from "@react-navigation/native-stack"
 import { WelcomeScreen, DemoScreen, DemoListScreen, DashboardScreen } from "../screens"
 import { navigationRef, useBackButtonHandler } from "./navigation-utilities"
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
+import BottomNavigator from "./bottom-navigator"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -60,7 +62,8 @@ export const AppNavigator = (props: NavigationProps) => {
       theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}
       {...props}
     >
-      <AppStack />
+      {/* <AppStack /> */}
+      <BottomNavigator />
     </NavigationContainer>
   )
 }
