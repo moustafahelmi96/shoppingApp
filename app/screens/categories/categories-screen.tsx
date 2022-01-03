@@ -2,20 +2,20 @@ import React from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle, View } from "react-native"
 import { CategoryNavigatorButton, GenderSwitch, Header, Screen } from "../../components"
-// import { useNavigation } from "@react-navigation/native"
+import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 import { categoriesData } from "./data"
 import { hp } from "../../utils/commonFunctions"
 
-export const SearchScreen = observer(function SearchScreen() {
+export const categoriesScreen = observer(function categoriesScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
 
   // Pull in navigation via hook
-  // const navigation = useNavigation()
+  const navigation = useNavigation()
   return (
-    <View testID="searchScreen" style={FULL}>
+    <View testID="categoriesScreen" style={FULL}>
       <Header rightIcon={"cart"} />
       <GenderSwitch />
       <Screen style={ROOT} preset="scroll" unsafe>
@@ -24,6 +24,12 @@ export const SearchScreen = observer(function SearchScreen() {
             title={category?.name}
             categoryColor={category?.color}
             key={index}
+            onPress={() => {
+              navigation.navigate("categoryDetails", {
+                category: category?.name,
+                subCategories: category?.subCategories,
+              })
+            }}
           />
         ))}
       </Screen>

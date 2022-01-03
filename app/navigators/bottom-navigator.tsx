@@ -4,6 +4,7 @@ import { ComingSoonScreen, DashboardScreen, SearchScreen } from "../screens"
 import { color } from "../theme"
 import Typography from "../components/Typography"
 import Icon from "react-native-vector-icons/FontAwesome"
+import { Categories } from "."
 const Tab = createBottomTabNavigator()
 
 const BottomNavigator: FC = () => {
@@ -29,14 +30,14 @@ const BottomNavigator: FC = () => {
         }}
       />
       <Tab.Screen
-        name="search"
-        component={SearchScreen}
+        name="categories"
+        component={Categories}
         options={{
           tabBarIcon: ({ focused }) => (
             <Icon name="search" size={25} color={focused ? activeTint : deActiveTint} />
           ),
           tabBarLabel: ({ focused }) => (
-            <Typography text={"Search"} size={10} color={focused ? activeTint : deActiveTint} />
+            <Typography text={"Categories"} size={10} color={focused ? activeTint : deActiveTint} />
           ),
         }}
       />

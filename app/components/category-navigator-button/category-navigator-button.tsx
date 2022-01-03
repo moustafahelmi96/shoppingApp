@@ -6,6 +6,7 @@ import { flatten } from "ramda"
 import Typography from "../Typography"
 import { hp } from "../../utils/commonFunctions"
 import Icon from "react-native-vector-icons/Ionicons"
+import { icons } from "../icon/icons"
 
 export interface CategoryNavigatorButtonProps {
   /**
@@ -14,6 +15,7 @@ export interface CategoryNavigatorButtonProps {
   title: string
   style?: StyleProp<ViewStyle>
   categoryColor?: string
+  onPress?: any
 }
 
 /**
@@ -34,9 +36,9 @@ export const CategoryNavigatorButton = observer(function CategoryNavigatorButton
   const styles = flatten([CONTAINER, style])
 
   return (
-    <TouchableOpacity style={styles}>
+    <TouchableOpacity style={styles} {...props}>
       <Typography text={title} color={categoryColor} />
-      <Icon color={color.palette.black} name={"chevron-forward"} size={22} />
+      <Icon color={color.palette.black} name={icons.forward} size={22} />
     </TouchableOpacity>
   )
 })
