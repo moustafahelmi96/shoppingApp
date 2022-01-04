@@ -1,5 +1,6 @@
 import { ViewStyle, TextStyle } from "react-native"
 import { color, spacing } from "../../theme"
+import { hp } from "../../utils/commonFunctions"
 
 /**
  * All text will start off looking like this.
@@ -14,6 +15,7 @@ const BASE_VIEW: ViewStyle = {
 
 const BASE_TEXT: TextStyle = {
   paddingHorizontal: spacing[3],
+  fontWeight: "bold",
 }
 
 /**
@@ -25,8 +27,23 @@ export const viewPresets: Record<string, ViewStyle> = {
   /**
    * A smaller piece of secondard information.
    */
-  primary: { ...BASE_VIEW, backgroundColor: color.palette.orange } as ViewStyle,
-  outline: { ...BASE_VIEW, backgroundColor: color.transparent, alignSelf: 'center', borderWidth: 1, borderColor: color.palette.black },
+  primary: {
+    ...BASE_VIEW, backgroundColor: color.palette.black,
+    width: "90%",
+    alignSelf: "center",
+    height: hp(5),
+    marginTop: hp(1),
+  } as ViewStyle,
+  outline: {
+    ...BASE_VIEW,
+    backgroundColor: color.transparent,
+    width: "90%",
+    alignSelf: "center",
+    height: hp(5),
+    marginTop: hp(1),
+    borderWidth: 1,
+    borderColor: color.palette.black,
+  },
   /**
    * A button without extras.
    */
@@ -39,7 +56,7 @@ export const viewPresets: Record<string, ViewStyle> = {
 }
 
 export const textPresets: Record<ButtonPresetNames, TextStyle> = {
-  primary: { ...BASE_TEXT, fontSize: 9, color: color.palette.black } as TextStyle,
+  primary: { ...BASE_TEXT, fontSize: 16, color: color.palette.white } as TextStyle,
   link: {
     ...BASE_TEXT,
     color: color.text,

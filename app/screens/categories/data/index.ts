@@ -8,7 +8,7 @@ const dummySubCategories = [
 
 const dummy1Product = {
     name: "VL7N low-top sneakers",
-    image: "https://cdn-images.farfetch-contents.com/15/35/02/07/15350207_27859457_1000.jpg",
+    images: ["https://cdn-images.farfetch-contents.com/15/35/02/07/15350207_27859457_1000.jpg", "https://cdn-images.farfetch-contents.com/15/72/15/62/15721562_30462134_1000.jpg"],
     price: "$1,800",
     category: "Shoes",
     brand: 'Valentino Garavani'
@@ -16,7 +16,7 @@ const dummy1Product = {
 
 const dummy2Product = {
     name: "VL7N slip-on sneakers",
-    image: "https://cdn-images.farfetch-contents.com/15/72/15/62/15721562_30460363_1000.jpg",
+    images: ["https://cdn-images.farfetch-contents.com/15/72/15/62/15721562_30462134_1000.jpg", "https://cdn-images.farfetch-contents.com/15/35/02/07/15350207_27859457_1000.jpg"],
     price: "$1,518",
     category: "Shoes",
     brand: 'Valentino Garavani'

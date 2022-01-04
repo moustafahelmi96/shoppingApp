@@ -13,9 +13,11 @@ export const CategoryDetailsScreen: FC<any> = observer(function CategoryDetailsS
   // Pull in navigation via hook
   const navigation = useNavigation()
   const subCategories = route.params?.subCategories || []
+  const categoryName = route?.params?.category
   return (
     <View style={FULL}>
-      <Header leftIcon="back" headerText={route?.params?.category} rightIcon="cart" />
+      {console.log("CategoryName", categoryName)}
+      <Header leftIcon="back" headerText={categoryName} rightIcon="cart" />
       <Screen style={ROOT} preset="scroll" unsafe>
         {console.log("pr", subCategories)}
         {subCategories.map((subCategory, index) => (

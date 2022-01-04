@@ -6,7 +6,7 @@ import Icon from "react-native-vector-icons/Ionicons"
 import { spacing } from "../../theme"
 import { translate } from "../../i18n/"
 import Typography from "../Typography"
-import { hp } from "../../utils/commonFunctions"
+import { hp, wp } from "../../utils/commonFunctions"
 import { icons } from "../icon/icons"
 import { useNavigation } from "@react-navigation/native"
 
@@ -64,15 +64,15 @@ export function Header(props: HeaderProps) {
 
 // static styles
 const ROOT: ViewStyle = {
+  width: "100%",
+  alignSelf: "center",
   flexDirection: "row",
-  paddingHorizontal: spacing[4],
   alignItems: "center",
-  paddingBottom: spacing[2],
-  justifyContent: "flex-start",
-  height: hp(5),
+  paddingHorizontal: spacing[2],
+  justifyContent: "space-between",
+  height: hp(7),
 }
 const TITLE_MIDDLE: ViewStyle = {
-  flex: 1,
   justifyContent: "center",
   alignItems: "center",
 }
